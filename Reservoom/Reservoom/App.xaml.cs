@@ -1,12 +1,4 @@
-﻿using Reservoom.Exceptions;
-using Reservoom.Models;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 
 namespace Reservoom
 {
@@ -17,7 +9,7 @@ namespace Reservoom
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            Hotel hotel = new Hotel("Anukul Suites");
+            /*Hotel hotel = new Hotel("Anukul Suites");
             try
             {
                 hotel.MakeReservation(new Reservation(
@@ -30,12 +22,13 @@ namespace Reservoom
                     "Anukul",
                     new DateTime(2000, 1, 1),
                     new DateTime(2000, 1, 4)));
-            }catch(ReservationConflictException ex)
+            }
+            catch (ReservationConflictException ex)
             {
 
             }
-            
-            IEnumerable<Reservation> reservation = hotel.GetReservationsForUser("Anukul");
+
+            IEnumerable<Reservation> reservation = hotel.GetReservationsForUser("Anukul");*/
             base.OnStartup(e);
         }
     }

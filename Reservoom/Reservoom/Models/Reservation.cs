@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Reservoom.Models
 {
@@ -25,7 +21,7 @@ namespace Reservoom.Models
 
         internal bool Conflicts(Reservation reservation)
         {
-            if(reservation.RoomID!=RoomID) { return false; }
+            if (reservation.RoomID != RoomID) { return false; }
             return reservation.StartTime < EndTime && reservation.EndTime > StartTime;
         }
     }
