@@ -19,7 +19,7 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock Grid.Column="0" Text="View Reservations" Style="{StaticResource Header}"/>
-            <Button Content="Make Reservation" Grid.Column="1" Margin="10 0 0 0" Command="{Binding MakeRservationCommand}"/>
+            <Button Content="Make Reservation" Grid.Column="1" Margin="10 0 0 0" Command="{Binding MakeReservationCommand}"/>
         </Grid>
 
         <ListView Grid.Row="1" Margin="0 25 0 0" ItemsSource="{Binding Reservations}">
