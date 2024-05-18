@@ -4,12 +4,12 @@ using System;
 
 namespace Reservoom.Services
 {
-    public class NavigationService
+    public class NavigationService<TViewModel> where TViewModel : ViewModelBase
     {
         private readonly NavigationStore _navigationStore;
-        public Func<ViewModelBase> _createViewModel;
+        public Func<TViewModel> _createViewModel;
 
-        public NavigationService(NavigationStore navigationStore, Func<ViewModelBase> createViewModel)
+        public NavigationService(NavigationStore navigationStore, Func<TViewModel> createViewModel)
         {
             _navigationStore = navigationStore;
             _createViewModel = createViewModel;

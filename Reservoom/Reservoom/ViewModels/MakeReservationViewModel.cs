@@ -105,10 +105,10 @@ namespace Reservoom.ViewModels
 
 		public readonly Dictionary<string, List<string>> _propertyNameToErrorsDictionary;
 
-		public MakeReservationViewModel(HotelStore hotelStore, Services.NavigationService reservationViewNavigationService)
+		public MakeReservationViewModel(HotelStore hotelStore, Services.NavigationService<ReservationListingViewModel> reservationViewNavigationService)
 		{
 			SubmitCommand = new MakeReservationCommand(this, hotelStore, reservationViewNavigationService);
-			CancelCommand = new NavigateCommand(reservationViewNavigationService);
+			CancelCommand = new NavigateCommand<ReservationListingViewModel>(reservationViewNavigationService);
 			_propertyNameToErrorsDictionary = new Dictionary<string, List<string>>();
 		}
 
